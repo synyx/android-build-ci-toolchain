@@ -1,26 +1,31 @@
-def generalJenkinsSSHKeyUUID = ''
-def gitlabBaseUrl = ''
-def gitlabUrl = ''
-def jdkInstallation = ''
-def mailingList = ''
+def generalJenkinsSSHKeyUUID =
+def gitlabBaseUrl =
+def gitlabUrl =
+def jdkInstallation =
+def mailingList =
 // only needed when more than one installation is defined
-def sonarInstallation = ''
+def sonarInstallation =
 
 def repos = [
         // Repo Name
         '<repoName>'           : [
                 // Relative repository Path, e.g. mobile/test-repo
-                repo: String,
+                repo:
+                // Mail Notification to set addresses, can be changed for every Job
                 mailer: mailingList,
                 // Jenkins tab name
-                view: String,
-                devicetest: boolean,
-                coverage: boolean,
-                packageId: String,
+                view:
+                // enable to test on Android Devices - boolean
+                devicetest:
+                // JaCoCo - boolean
+                coverage:
+                // String
+                packageId: 
+                // delete if no automatic deployment is wanted
                 deployments: [
                         [
                                 // Job Deploy Name
-                                name: String,
+                                name:
                                 apk:'release/app-release.apk'
                         ],
                 ],
@@ -128,16 +133,6 @@ repos.each() {
                             fromRootBuildScriptDir(true)
                             tasks('copyCoverageFile')
                         }
-                    }
-                }
-
-                if (metaData.publish) {
-
-                    gradle {
-
-                        useWrapper(true)
-                        fromRootBuildScriptDir(true)
-                        tasks('publish')
                     }
                 }
 
