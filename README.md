@@ -77,3 +77,4 @@ For further configuration, see: [Job DSL Doc](https://jenkinsci.github.io/job-ds
 
 * Add AVD
 * Puppet Setup
+* Complete Docker Setup
