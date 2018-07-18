@@ -7,7 +7,7 @@ Publishing the .apk on the Play Store is automatically done for the Alpha track 
 ## Setup
 
 For this setup a dedicated Node was used, but it can easily be done on the Jenkins Master.  
-The required plugins can be found [here](#Plugins)
+The required plugins can be found [here](#plugins).
 
 ### SDK
 
@@ -73,8 +73,36 @@ Example:
 
 For further configuration, see: [Job DSL Doc](https://jenkinsci.github.io/job-dsl-plugin)
 
+## Configuring AVD
+
+By default the job will create a parameterized AVD during its runtime and destroyed afterwards. See [below](#avd-parameter) for the configuration.  
+Possible configurations include using different AVDs for different jobs and reusing them.
+
+### AVD Parameter
+
+  ~~~ groovy
+  androidEmulator {
+    avdName('foo')
+    osVersion(null)
+    screenDensity(null)
+    screenResolution(null)
+    deviceLocale(null)
+    sdCardSize(null)
+    wipeData(false)
+    showWindow(false)
+    useSnapshots(false)
+    deleteAfterBuild(false)
+    startupDelay(0)
+    startupTimeout(0)
+    commandLineOptions('')
+    targetAbi(null)
+    executable('')
+    avdNameSuffix(null)
+  }
+  ~~~
+
 ## ToDo
 
-* Add AVD
 * Puppet Setup
 * Complete Docker Setup
+* Redo README
