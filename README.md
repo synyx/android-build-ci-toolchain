@@ -76,7 +76,7 @@ For further configuration, see: [Job DSL Doc](https://jenkinsci.github.io/job-ds
 
 ## Configuring AVD
 
-This requires the afore mentioned Android Emulator Plugin.  
+This requires the aforementioned Android Emulator Plugin.  
 
 By default the job will create a parameterized AVD during its runtime and destroyed afterwards. See [below](#avd-parameter) for the configuration.  
 Possible configurations include using different AVDs for different jobs and reusing them.  
