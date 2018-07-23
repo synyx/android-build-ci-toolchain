@@ -35,6 +35,7 @@ Set `ANDROID_HOME` as an environment variable pointing to your Android SDK.
 
 [DSL](https://plugins.jenkins.io/job-dsl)
 
+[Android Emulator](https://plugins.jenkins.io/android-emulator)
 ## Job Configuration
 
 Configuration can be found in `android.groovy`.  
@@ -75,8 +76,11 @@ For further configuration, see: [Job DSL Doc](https://jenkinsci.github.io/job-ds
 
 ## Configuring AVD
 
+This requires the afore mentioned Android Emulator Plugin.  
+
 By default the job will create a parameterized AVD during its runtime and destroyed afterwards. See [below](#avd-parameter) for the configuration.  
-Possible configurations include using different AVDs for different jobs and reusing them.
+Possible configurations include using different AVDs for different jobs and reusing them.  
+  
 
 ### AVD Parameter
 
@@ -101,8 +105,9 @@ Possible configurations include using different AVDs for different jobs and reus
   }
   ~~~
 
+`showWindow(false)` is the equivalent of the `-no-window` parameter parameter.
+
 ## ToDo
 
-* Puppet Setup
 * Complete Docker Setup
 * Redo README
