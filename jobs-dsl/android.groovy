@@ -153,6 +153,12 @@ repos.each() {
             }
             wrappers {
 
+              androidEmulator{
+
+                avdName('Emulator')
+                deleteAfterBuild(true)
+                showWindow(false)
+              }
                 timeout {
 
                     absolute(60)
