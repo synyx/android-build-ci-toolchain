@@ -36,8 +36,10 @@ Set `ANDROID_HOME` as an environment variable pointing to your Android SDK.
 [DSL](https://plugins.jenkins.io/job-dsl)
 
 [Android Emulator](https://plugins.jenkins.io/android-emulator)
+
 ## Job Configuration
 
+Jobs are created via the DSL Plugin.
 Configuration can be found in `android.groovy`.  
 The following variables need to be set:
 
@@ -72,7 +74,7 @@ Example:
   ]
   ~~~
 
-For further configuration, see: [Job DSL Doc](https://jenkinsci.github.io/job-dsl-plugin)
+For a detailed documentation of the configuration, see: [Job DSL Doc](https://jenkinsci.github.io/job-dsl-plugin)
 
 ## Configuring AVD
 
@@ -109,5 +111,5 @@ Possible configurations include using different AVDs for different jobs and reus
 
 ## ToDo
 
-* Complete Docker Setup
+* Docker Setup
 * Redo README
