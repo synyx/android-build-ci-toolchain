@@ -50,6 +50,29 @@ repos.each() {
         jobViews[viewName].add(masterBuildJobName)
         freeStyleJob(masterBuildJobName) {
 
+            wrappers {
+                androidEmulator {
+                //setting a name will use an existing AVD by default.
+                    avdName(null)
+                    deviceDefinition(null)
+                    osVersion('android-25')
+                    screenDensity('120')
+                    screenResolution('WVGA')
+                    deviceLocale('en_US')
+                    sdCardSize(null)
+                    wipeData(false)
+                    showWindow(false)
+                    useSnapshots(false)
+                    deleteAfterBuild(true)
+                    startupDelay(5)
+                    startupTimeout(0)
+                    commandLineOptions('')
+                    targetAbi('google_apis/x86')
+                    executable('')
+                    avdNameSuffix(null)
+                }
+            }
+
             label('android')
             properties {
 
