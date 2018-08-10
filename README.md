@@ -150,5 +150,4 @@ Currently kvm is not assigned a group and needs to be manually set to emulate x8
 
 * Add Sonar to the Stack
 * Labels in Docker
-* undo deleting image
 * Alpine
