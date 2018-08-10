@@ -11,7 +11,9 @@ You can build the stack yourself with docker. To start the container use:
   # -p 50000:50000 if it's part of a cluster
   # -v jenkins_home:/var/jenkins_home to make the jenkins home dir persistent
   # --privileged -v /dev/bus/usb:/dev/bus/usb This shares the ADB server container's network with ADB client containers
-  $ docker run --privileged -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /dev/bus/usb:/dev/bus/usb jenkins-android-ci
+  $ docker run --privileged -p 8080:8080 -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  -v /dev/bus/usb:/dev/bus/usb jenkins-android-ci
   ~~~
 
 Go to [localhost:8080](http://localhost:8080) and paste the admin key to start the setup. Install any additional plugins via the GUI or add them to the last line of the `Dockerfile`.  
